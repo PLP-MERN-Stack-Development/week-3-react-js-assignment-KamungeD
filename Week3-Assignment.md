@@ -76,4 +76,4 @@ Build a responsive React application using JSX and Tailwind CSS that demonstrate
 6. Deploy your application to Vercel, Netlify, or GitHub Pages
 7. Add the deployed URL to your README.md
 8. Your submission will be automatically graded based on the criteria in the autograding configuration
-9. The instructor will review your submission after the autograding is complete 
+9. The instructor will review your submission after the autograding is complete
