@@ -12,7 +12,6 @@ function App() {
         <div className='mt-4 space-x-2'>
           <Button variant="primary">Primary</Button>
           <Button variant="secondary">Secondary</Button>
-          <Button variant="danger">Danger</Button>
         </div>
       </Card>
 
