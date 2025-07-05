@@ -1,55 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Routes, Route, Link } from 'react-router-dom'
-
-
-function Home() {
-  return <h2>Home Page</h2>;
-}
-
-function About() {
-  return <h2>About Page</h2>;
-}
+import Layout from './components/Layout'
+import Card from './components/card'
+import TaskManager from './components/TaskManager'
+import Button from './components/Button'
+import Posts from './components/Posts' 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div>
-      <nav>
-        <Link to="/" style={{ marginRight: 10 }}>Home</Link>
-        <Link to="/about">About</Link>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </div>
+    <Layout>
+      <Card title="Welcome to the Task Manager">
+        <p>Feel Enthusiastic to be here</p>
+        <div className='mt-4 space-x-2'>
+          <Button variant="primary">Primary</Button>
+          <Button variant="secondary">Secondary</Button>
+          <Button variant="danger">Danger</Button>
+        </div>
+      </Card>
 
-    // <>
-    //   <div>
-    //     <a href="https://vite.dev" target="_blank">
-    //       <img src={viteLogo} className="logo" alt="Vite logo" />
-    //     </a>
-    //     <a href="https://react.dev" target="_blank">
-    //       <img src={reactLogo} className="logo react" alt="React logo" />
-    //     </a>
-    //   </div>
-    //   <h1>Vite + React</h1>
-    //   <div className="card">
-    //     <button onClick={() => setCount((count) => count + 1)}>
-    //       count is {count}
-    //     </button>
-    //     <p>
-    //       Edit <code>src/App.jsx</code> and save to test HMR
-    //     </p>
-    //   </div>
-    //   <p className="read-the-docs">
-    //     Click on the Vite and React logos to learn more
-    //   </p>
-    // </>
+      <div className="mt-8">
+        <Card title="Task Management">
+          <TaskManager />
+        </Card>
+      </div>
+
+      <div className="mt-8">
+        <Posts /> {/*  Displaying fetched API data with search and pagination */}
+      </div>
+    </Layout>
   )
 }
 
